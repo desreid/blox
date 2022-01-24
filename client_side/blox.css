@@ -1,0 +1,9 @@
+body {
+	font-family: Montserrat,sans-serif;
+}
+h1 {
+	color: #00beaf;
+}
+div#contact_form {
+	padding: 20px;
+}
