@@ -18,6 +18,18 @@ Data is stored in a DynamoDB database. This is an AWS nosql database.
 5. Modify the form action url in index.html in the client_side folder to match the API Gateway end point
 6. Upload contents of client_side folder to a static web hosting service eg S3 bucket
 
+## Testing Approaches
+
+### Unit testing
+
+The Python code could have unit tests written for it in unittest. The vue.js code could be tested in a Javascript framework like Mocha or Jest.
+
+### End to end testing
+
+Selenium could be used to test the in-browser behaviour. Testing the API could be done using Postman, which can run suites of API calls. 
+
+AWS also provides a facility for testing Lambda functions which would be appropriate here, although I've not investigated it.
+
 ## TODO
 
 * Setting up HTTPS is a must for gathering personal data, but simple hosting that I've used on S3 just gives you HTTP
@@ -30,3 +42,5 @@ Data is stored in a DynamoDB database. This is an AWS nosql database.
 * Validate the multiple select inputs as enums
 * Use AWS Pinpoint, which is AWS' customer engagement platform for the whole thing - depending on the broader requirements
 * Set up a configuration file containing the DynamoDB table name and the form POST url, instead of this being hard coded
+* Run the Python code through pylint
+ 
